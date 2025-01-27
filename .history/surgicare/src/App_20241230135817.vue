@@ -1,0 +1,164 @@
+<template>
+  <div id="app" class="app-container">
+    <aside class="sidebar">
+      <img src="/Users/frank/Vscode/Vue/surgicare/public/Icon_surgicare.png" alt="Logo" class="logo" />
+      <nav class="menu">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/member">Member</router-link>
+        <router-link to="/wound-assessment">Wound Assessment</router-link>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Overview</h1>
+        <div class="header-tools">
+          <input type="text" placeholder="Search for something" class="search-box" />
+          <button class="settings-btn">⚙️</button>
+          <button class="notifications-btn">🔔</button>
+          <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic" />
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="content-area">
+        <!-- Placeholder for now -->
+        <div class="placeholder">WELCOME TO THE WOUND ASSESSMENT APP</div>
+        <router-view />
+      </div>
+    </main>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "DashboardPage",
+};
+</script>
+
+<style scoped>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #f0f9ff, #c1eefd);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #004e92, #000428);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #004e92;
+  margin: 0;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  margin-right: 10px;
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 10px rgba(0, 78, 146, 0.5);
+}
+
+.settings-btn,
+.notifications-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #555;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #004e92;
+}
+
+/* Content Area */
+.content-area {
+  flex-grow: 1;
+  background: linear-gradient(to bottom right, #e6f7f9, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.placeholder {
+  width: 80%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-ite 

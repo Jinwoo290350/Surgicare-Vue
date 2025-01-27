@@ -1,0 +1,150 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: #4ca6a8; /* ใช้โทนสีเขียวฟ้าแทน */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #1e3c34;
+  background-image: linear-gradient(to top right, #3a8476, #a8f5c8);
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 1em;
+  transition: transform 0.3s ease-in-out;
+}
+h1:hover {
+  transform: scale(1.1); /* เพิ่มเอฟเฟกต์ Hover */
+}
+
+button {
+  border-radius: 10px;
+  border: 2px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #2a3f3b;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  border-color: #50c4b7;
+  background-color: #344d47;
+  transform: translateY(-3px);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px solid #50c4b7;
+}
+
+.card {
+  padding: 2.5em;
+  background-color: #2e3d3a;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    padding: 0.7em 1.2em;
+    font-size: 0.95em;
+  }
+
+  .card {
+    padding: 2em;
+  }
+
+  #app {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+}
+
+/* Light Mode Styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #1f2d2a;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #57bdb3; /* โทนเขียวฟ้าสว่าง */
+  }
+  button {
+    background-color: #f5f5f5;
+    color: #1f2d2a;
+    border-color: #50c4b7;
+  }
+  .card {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
